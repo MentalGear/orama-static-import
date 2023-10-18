@@ -3,7 +3,7 @@
 
 ### Usage
 `import { create, ... } from "orama-monorepo-static-import"`
-name come sfrom package.json
+module name comes from package.json
 
 <p align="center">
   <img src="/misc/readme/orama-readme_logo-dark.png#gh-dark-mode-only" />
