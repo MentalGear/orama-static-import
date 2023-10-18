@@ -1,4 +1,4 @@
-import type {
+import {
   getDefaultFileName as esmGetDefaultFileName,
   persistToFile as esmPersistToFile,
   restoreFromFile as esmRestoreFromFile
@@ -15,6 +15,10 @@ export type RequireCallback = (err: Error | undefined, orama?: OramaPluginDataPe
 let _esmRestoreFromFile: typeof esmRestoreFromFile
 let _esmPersistToFile: typeof esmPersistToFile
 let _esmGetDefaultFileName: typeof esmGetDefaultFileName
+
+_esmRestoreFromFile = esmRestoreFromFile
+_esmPersistToFile = esmPersistToFile
+_esmGetDefaultFileName = esmGetDefaultFileName
 
 export async function getDefaultFileName(
   ...args: Parameters<typeof esmGetDefaultFileName>

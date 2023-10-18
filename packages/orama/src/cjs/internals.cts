@@ -1,4 +1,4 @@
-import type {
+import {
   boundedLevenshtein as esmBoundedLevenshtein,
   formatBytes as esmFormatBytes,
   formatNanoseconds as esmFormatNanoseconds,
@@ -6,11 +6,11 @@ import type {
   uniqueId as esmUniqueId,
 } from '../internals.js'
 
-let _esmBoundedLevenshtein: typeof esmBoundedLevenshtein
-let _esmFormatBytes: typeof esmFormatBytes
-let _esmFormatNanoseconds: typeof esmFormatNanoseconds
-let _esmGetNanosecondsTime: typeof esmGetNanosecondsTime
-let _esmUniqueId: typeof esmUniqueId
+let _esmBoundedLevenshtein = esmBoundedLevenshtein
+let _esmFormatBytes = esmFormatBytes
+let _esmFormatNanoseconds = esmFormatNanoseconds
+let _esmGetNanosecondsTime = esmGetNanosecondsTime
+let _esmUniqueId = esmUniqueId
 
 export async function boundedLevenshtein(
   ...args: Parameters<typeof esmBoundedLevenshtein>

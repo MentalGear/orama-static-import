@@ -1,6 +1,8 @@
 import { createTokenizer as esmCreateTokenizer } from '../../components/tokenizer/index.js'
 
 let _esmCreateTokenizer: typeof esmCreateTokenizer
+ 
+_esmCreateTokenizer = esmCreateTokenizer
 
 export async function createTokenizer(
   ...args: Parameters<typeof esmCreateTokenizer>

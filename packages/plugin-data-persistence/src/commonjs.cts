@@ -1,4 +1,4 @@
-import type {
+import  {
   persist as esmPersist,
   restore as esmRestore,
   persistToFile as esmPersistToFile,
@@ -16,6 +16,11 @@ let _esmRestore: typeof esmRestore
 let _esmPersist: typeof esmPersist
 let _esmRestoreFromFile: typeof esmRestoreFromFile
 let _esmPersistToFile: typeof esmPersistToFile
+
+_esmRestore = esmRestore
+_esmPersist = esmPersist
+_esmRestoreFromFile = esmRestoreFromFile
+_esmPersistToFile = esmPersistToFile
 
 export async function persist(...args: Parameters<typeof esmPersist>): ReturnType<typeof esmPersist> {
   if (!_esmPersist) {

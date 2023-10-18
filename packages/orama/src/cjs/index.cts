@@ -1,25 +1,48 @@
-import type { create as esmCreate } from '../methods/create.js'
-import type { count as esmCount, getByID as esmGetByID } from '../methods/docs.js'
-import type { insert as esmInsert, insertMultiple as esminsertMultiple } from '../methods/insert.js'
-import type { remove as esmRemove, removeMultiple as esmRemoveMultiple } from '../methods/remove.js'
-import type { search as esmSearch } from '../methods/search.js'
-import type { searchVector as esmSearchVector } from '../methods/search-vector.js'
-import type { load as esmLoad, save as esmSave } from '../methods/serialization.js'
-import type { update as esmUpdate, updateMultiple as esmUpdateMultiple } from '../methods/update.js'
+// import type { create as esmCreate } from '../methods/create.js'
+// import type { count as esmCount, getByID as esmGetByID } from '../methods/docs.js'
+// import type { insert as esmInsert, insertMultiple as esminsertMultiple } from '../methods/insert.js'
+// import type { remove as esmRemove, removeMultiple as esmRemoveMultiple } from '../methods/remove.js'
+// import type { search as esmSearch } from '../methods/search.js'
+// import type { searchVector as esmSearchVector } from '../methods/search-vector.js'
+// import type { load as esmLoad, save as esmSave } from '../methods/serialization.js'
+// import type { update as esmUpdate, updateMultiple as esmUpdateMultiple } from '../methods/update.js'
 
-let _esmCount: typeof esmCount
-let _esmCreate: typeof esmCreate
-let _esmGetByID: typeof esmGetByID
-let _esmInsert: typeof esmInsert
-let _esmInsertMultiple: typeof esminsertMultiple
-let _esmLoad: typeof esmLoad
-let _esmRemove: typeof esmRemove
-let _esmRemoveMultiple: typeof esmRemoveMultiple
-let _esmSave: typeof esmSave
-let _esmSearch: typeof esmSearch
-let _esmUpdate: typeof esmUpdate
-let _esmUpdateMultiple: typeof esmUpdateMultiple
-let _esmSearchVector: typeof esmSearchVector
+// let _esmCount: typeof esmCount
+// let _esmCreate: typeof esmCreate
+// let _esmGetByID: typeof esmGetByID
+// let _esmInsert: typeof esmInsert
+// let _esmInsertMultiple: typeof esminsertMultiple
+// let _esmLoad: typeof esmLoad
+// let _esmRemove: typeof esmRemove
+// let _esmRemoveMultiple: typeof esmRemoveMultiple
+// let _esmSave: typeof esmSave
+// let _esmSearch: typeof esmSearch
+// let _esmUpdate: typeof esmUpdate
+// let _esmUpdateMultiple: typeof esmUpdateMultiple
+// let _esmSearchVector: typeof esmSearchVector
+
+import  { create as esmCreate } from '../methods/create.js'
+import  { count as esmCount, getByID as esmGetByID } from '../methods/docs.js'
+import  { insert as esmInsert, insertMultiple as esminsertMultiple } from '../methods/insert.js'
+import  { remove as esmRemove, removeMultiple as esmRemoveMultiple } from '../methods/remove.js'
+import  { search as esmSearch } from '../methods/search.js'
+import  { searchVector as esmSearchVector } from '../methods/search-vector.js'
+import  { load as esmLoad, save as esmSave } from '../methods/serialization.js'
+import  { update as esmUpdate, updateMultiple as esmUpdateMultiple } from '../methods/update.js'
+
+let _esmCount = esmCount
+let _esmCreate = esmCreate
+let _esmGetByID = esmGetByID
+let _esmInsert = esmInsert
+let _esmInsertMultiple = esminsertMultiple
+let _esmLoad = esmLoad
+let _esmRemove = esmRemove
+let _esmRemoveMultiple = esmRemoveMultiple
+let _esmSave = esmSave
+let _esmSearch = esmSearch
+let _esmUpdate = esmUpdate
+let _esmUpdateMultiple = esmUpdateMultiple
+let _esmSearchVector = esmSearchVector
 
 export async function count(...args: Parameters<typeof esmCount>): ReturnType<typeof esmCount> {
   if (!_esmCount) {

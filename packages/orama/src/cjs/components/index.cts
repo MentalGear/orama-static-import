@@ -22,6 +22,17 @@ let _esmLoad: typeof esmLoad
 let _esmSave: typeof esmSave
 let _esmCreateIndex: typeof esmCreateIndex
 
+_esmCreate = esmCreate
+_esmInsert = esmInsert
+_esmRemove = esmRemove
+_esmSearch = esmSearch
+_esmSearchByWhereClause = esmSearchByWhereClause
+_esmGetSearchableProperties = esmGetSearchableProperties
+_esmGetSearchablePropertiesWithTypes = esmGetSearchablePropertiesWithTypes
+_esmLoad = esmLoad
+_esmSave = esmSave
+_esmCreateIndex = esmCreateIndex
+
 export async function create(...args: Parameters<typeof esmCreate>): ReturnType<typeof esmCreate> {
   if (!_esmCreate) {
     const imported = await import('../../components/index.js')
