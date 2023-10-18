@@ -1,8 +1,9 @@
 ### Install
-pnpm add https://github.com/MentalGear/orama-static-import`
+`pnpm add https://github.com/MentalGear/orama-static-import`
 
 ### Usage
-import { create, ... } from "orama-monorepo-static-import" (package.json name)
+`import { create, ... } from "orama-monorepo-static-import"`
+name come sfrom package.json
 
 <p align="center">
   <img src="/misc/readme/orama-readme_logo-dark.png#gh-dark-mode-only" />
