@@ -1,7 +1,7 @@
 .docusaurus/
 .vscode/
 coverage/
-dist/
+# dist/
 tmp/
 **/tmp/
 node_modules/
